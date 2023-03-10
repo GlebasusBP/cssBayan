@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  background-color: bisque;
+}
+
+.bayan{
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label{
+  display: block;
+  position: relative;
+  height: 50px;
+  z-index: 20;
+  font-size: 24px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+label:hover{
+  color:blue;
+}
+
+input:checked + label,
+input:checked + label:hover{
+  background: #c6e1ec;
+  color: #3d7489;
+}
+
+input{
+  display: none;
+}
+
+article{
+  position: relative;
+  z-index: 10;
+  height: 0;
+  overflow: hidden;
+  margin-top: -1px;
+  transition: .2s ease;
+}
+
+input:checked~article,
+input:hover~article{
+  height: 100px;
+  transition: .2s ease;
+}
