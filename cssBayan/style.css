@@ -22,11 +22,21 @@ body{
   align-items: center;
 }
 
+.item{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000000;
+}
+
+.icon{
+  cursor: pointer;
+}
+
 label{
   display: block;
-  position: relative;
   height: 50px;
-  z-index: 20;
   font-size: 24px;
   padding: 0 10px;
   cursor: pointer;
@@ -47,16 +57,27 @@ input{
 }
 
 article{
-  position: relative;
-  z-index: 10;
   height: 0;
   overflow: hidden;
-  margin-top: -1px;
   transition: .2s ease;
+  cursor: pointer;
 }
 
 input:checked~article,
 input:hover~article{
-  height: 100px;
+  height: 300px;
+  transition: .2s ease;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  transition: .2s ease;
+}
+
+input:checked~.icon,
+input:hover~.icon{
+  transform: rotate(0deg);
   transition: .2s ease;
 }
