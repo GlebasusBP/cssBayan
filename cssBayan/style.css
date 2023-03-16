@@ -1,0 +1,183 @@
+/* @media (max-width: 320px) {
+  
+} */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffe4c4;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bayan{
+  width: 75%;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.bayan-title{
+  margin-bottom: 3rem;
+  font-size: 4rem;
+}
+
+.item{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-title{
+  color: blue;
+}
+
+.icon{
+  display: block;
+  opacity: 0;
+  background-image: url('images/icon.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 1rem;
+  height: 1rem;
+  transition: all 0.7s;
+}
+
+.label{
+  display: block;
+  border-top: 0.1rem solid #000;
+  padding: 2rem 0;
+  transition: all .2s;
+}
+
+.input-item{
+  visibility: hidden;
+  font-size: 0;
+}
+
+.item-image{
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  visibility: hidden;
+  transition: all .2s;
+}
+
+.input-item:checked ~ .item-image {
+  transform: scale(1);
+  width: 18rem;
+  height: 11rem;
+  visibility: visible;
+}
+
+.input-item:checked ~ .item > .item-title {
+  color: black;
+}
+
+.input-item:checked ~ .item > .icon {
+  transform: rotate(45deg);
+}
+
+.label:active {
+  opacity: 0.5;
+}
+
+.input-item:active ~ .item > .item-title {
+  color: blue;
+}
+
+.input-item:active ~ .item > .icon {
+  background-image: url('../img/plus-blue.svg');
+  transform: rotate(45deg);
+  opacity: 1;
+}
+
+@media(hover: hover) {
+  .container:hover .label {
+    cursor: pointer;
+  }
+
+  .container:hover .icon {
+    opacity: 1;
+  }
+
+  .container:hover .item-title {
+    color: black;
+  }
+
+  .label:hover>.item-image {
+    transform: scale(1);
+    width: 18rem;
+    height: 11rem;
+    visibility: visible;
+  }
+
+  .label:hover .icon {
+    transform: rotate(45deg);
+    color: black;
+  }
+
+}
+
+@media (min-width:820px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .bayan {
+    width: 60%;
+  }
+
+  .bayan-title {
+    font-size: 5rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .label:hover>.item-image {
+    width: 20rem;
+    height: 16rem;
+  }
+
+  .input-item:checked~.item-image {
+    width: 20rem;
+    height: 16rem;
+  }
+
+}
+
+@media (min-width:1920px) {
+  body {
+    font-size: 2rem;
+  }
+
+  .bayan {
+    width: 50%;
+  }
+
+  .bayan-title {
+    font-size: 6rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .label:hover>.item-image {
+    width: 25rem;
+    height: 20rem;
+  }
+
+  .input-item:checked~.item-image {
+    width: 25rem;
+    height: 20rem;
+  }
+
+}
